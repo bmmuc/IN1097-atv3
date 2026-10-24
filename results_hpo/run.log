@@ -1,0 +1,33 @@
+[Parallel(n_jobs=12)]: Using backend LokyBackend with 12 concurrent workers.
+[hpo-ws] K=128 configs, n=50 datasets, T=30, n_init=5, seeds=20
+[hpo-ws] rank do default (de 128): mediana 42, media 45.7, melhor-que-metade em 40/50 datasets
+[Parallel(n_jobs=12)]: Done  38 out of  50 | elapsed: 26.5min remaining:  8.4min
+[Parallel(n_jobs=12)]: Done  50 out of  50 | elapsed: 30.0min finished
+
+[falhas] 6/50 datasets com gain_auc<0 (ws_sim_ext_k3 pior que cold)
+  ethos_category_gender_vs_rest: gain_auc=-0.0075 nn1=ethos_category_race_vs_rest (dist 14.5) melhor config do nn1=54 (rank 66 no alvo); warm=54 105 87 93 21, melhor rank do warm no alvo=28, oraculo=42
+  ethos_category_religion_vs_rest: gain_auc=-0.0016 nn1=ethos_category_gender_vs_rest (dist 18.5) melhor config do nn1=42 (rank 13 no alvo); warm=42 54 87 11 93, melhor rank do warm no alvo=13, oraculo=105
+  ihc_stg1_implicit_vs_not: gain_auc=-0.0011 nn1=ihc_stg1_binary (dist 5.8) melhor config do nn1=8 (rank 62 no alvo); warm=8 5 58 67 38, melhor rank do warm no alvo=7, oraculo=123
+  ihc_stg2_threatening_vs_rest: gain_auc=-0.0370 nn1=ihc_stg2_irony_vs_rest (dist 25.8) melhor config do nn1=98 (rank 22 no alvo); warm=98 33 58 123 101, melhor rank do warm no alvo=22, oraculo=115
+  ihc_target_lgbt_vs_not: gain_auc=-0.0146 nn1=ethos_category_gender_vs_rest (dist 45.0) melhor config do nn1=42 (rank 55 no alvo); warm=42 54 105 11 93, melhor rank do warm no alvo=38, oraculo=75
+  mlma_fr_hate_vs_normal: gain_auc=-0.0224 nn1=hateval_es_HS (dist 61.3) melhor config do nn1=126 (rank 65 no alvo); warm=126 70 18 123 27, melhor rank do warm no alvo=25, oraculo=93
+[hpo-ws] saidas em results_hpo
+
+## Regret normalizado por orcamento
+
+Orcamento 5:
+| method           |   regret |
+|:-----------------|---------:|
+| ws_rank          |   0.0482 |
+| ws_sim_ext_k5    |   0.0578 |
+| ws_sim_ext_k3    |   0.0625 |
+| ws_sim_base_k3   |   0.064  |
+| ws_sim_base_k5   |   0.0736 |
+| ws_sim_randnn_k3 |   0.0792 |
+| ws_sim_ext_k1    |   0.0846 |
+| ws_sim_base_k1   |   0.085  |
+| random           |   0.1347 |
+| smbo_cold        |   0.1373 |
+| default          |   0.2169 |
+
+Orcamento 15:

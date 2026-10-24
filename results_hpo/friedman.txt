@@ -1,0 +1,47 @@
+== orcamento 5 avaliacoes (N=50, k=5) ==
+Friedman chi2=131.164 p=2.195e-27
+CD(Nemenyi, 0.05)=0.863
+ranks medios (1=melhor):
+method
+ws_rank          1.64
+ws_sim_ext_k3    1.80
+random           3.36
+smbo_cold        3.54
+default          4.66
+pares significativos: [('default', 'random', 1.3), ('default', 'smbo_cold', 1.12), ('default', 'ws_sim_ext_k3', 2.86), ('default', 'ws_rank', 3.02), ('random', 'ws_sim_ext_k3', 1.56), ('random', 'ws_rank', 1.72), ('smbo_cold', 'ws_sim_ext_k3', 1.74), ('smbo_cold', 'ws_rank', 1.9)]
+
+== orcamento 15 avaliacoes (N=50, k=5) ==
+Friedman chi2=132.922 p=9.237e-28
+CD(Nemenyi, 0.05)=0.863
+ranks medios (1=melhor):
+method
+ws_sim_ext_k3    1.95
+ws_rank          1.95
+smbo_cold        2.62
+random           3.50
+default          4.98
+pares significativos: [('default', 'random', 1.48), ('default', 'smbo_cold', 2.36), ('default', 'ws_sim_ext_k3', 3.03), ('default', 'ws_rank', 3.03), ('random', 'smbo_cold', 0.88), ('random', 'ws_sim_ext_k3', 1.55), ('random', 'ws_rank', 1.55)]
+
+== orcamento 30 avaliacoes (N=50, k=5) ==
+Friedman chi2=137.360 p=1.037e-28
+CD(Nemenyi, 0.05)=0.863
+ranks medios (1=melhor):
+method
+ws_sim_ext_k3    1.93
+ws_rank          2.01
+smbo_cold        2.54
+random           3.52
+default          5.00
+pares significativos: [('default', 'random', 1.48), ('default', 'smbo_cold', 2.46), ('default', 'ws_sim_ext_k3', 3.07), ('default', 'ws_rank', 2.99), ('random', 'smbo_cold', 0.98), ('random', 'ws_sim_ext_k3', 1.59), ('random', 'ws_rank', 1.51)]
+
+== AUC (regret medio i=1..T) (N=50, k=5) ==
+Friedman chi2=146.192 p=1.332e-30
+CD(Nemenyi, 0.05)=0.863
+ranks medios (1=melhor):
+method
+ws_rank          1.72
+ws_sim_ext_k3    1.76
+smbo_cold        3.02
+random           3.54
+default          4.96
+pares significativos: [('default', 'random', 1.42), ('default', 'smbo_cold', 1.94), ('default', 'ws_sim_ext_k3', 3.2), ('default', 'ws_rank', 3.24), ('random', 'ws_sim_ext_k3', 1.78), ('random', 'ws_rank', 1.82), ('smbo_cold', 'ws_sim_ext_k3', 1.26), ('smbo_cold', 'ws_rank', 1.3)]
